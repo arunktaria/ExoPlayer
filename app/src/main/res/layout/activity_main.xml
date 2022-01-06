@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+
+        <include layout="@layout/customtoolbar" android:id="@+id/toolcustom" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16sp"
+            android:orientation="vertical">
+            <include layout="@layout/custombuttons"
+                android:layout_below="@+id/toolcustom"
+                android:layout_marginTop="100sp"
+                android:layout_margin="100sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/exoview1"
+                android:layout_width="match_parent"
+                android:layout_height="300sp" />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16sp"
+            android:orientation="vertical">
+        <include layout="@layout/custombuttons2"
+            android:layout_below="@+id/toolcustom"
+            android:layout_marginTop="100sp"
+            android:layout_margin="100sp"
+            android:layout_weight="0"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"/>
+
+
+        <com.google.android.exoplayer2.ui.PlayerView
+                android:layout_width="match_parent"
+                android:layout_height="300sp"
+                android:layout_marginTop="16sp"
+                android:id="@+id/exoview2" />
+        </RelativeLayout>
+
+</LinearLayout>
+
+
+</layout>
